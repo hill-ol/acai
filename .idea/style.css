@@ -1,0 +1,80 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #f6f2e9;
+}
+
+#order-display {
+    font-size: 18px;
+    margin: 20px;
+    padding: 10px;
+    background-color: #fff3cd;
+    border: 1px solid #ffeeba;
+}
+
+#base-select {
+    margin: 15px;
+    padding: 10px;
+    font-size: 16px;
+}
+
+#ingredients {
+    margin: 20px;
+}
+
+.ingredient {
+    display: inline-block;
+    margin: 5px;
+    padding: 10px 15px;
+    background-color: #a3d2ca;
+    color: #fff;
+    font-weight: bold;
+    cursor: grab;
+    border-radius: 8px;
+    user-select: none;
+}
+
+#bowl {
+    margin-top: 20px;
+    border: 2px dashed #ccc;
+    min-height: 100px;
+    padding: 10px;
+    background-color: #fff;
+}
+
+.bowl-item {
+    font-size: 20px;
+    padding: 5px;
+}
+
+#submit-btn,
+#reset-btn {
+    margin: 10px;
+    padding: 10px 20px;
+    background-color: #198754;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+#reset-btn {
+    background-color: #dc3545;
+}
+
+#result {
+    margin-top: 15px;
+    font-weight: bold;
+}
+
+.order-ticket {
+    background-color: #fff;
+    border: 2px dashed #333;
+    width: 300px;
+    margin: 20px auto;
+    padding: 15px;
+    font-family: monospace;
+    font-size: 16px;
+    text-align: left;
+    box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.1);
+}
