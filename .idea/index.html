@@ -5,165 +5,48 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Açaí Bowl Builder</title>
     <link rel="stylesheet" href="style.css" />
-    <style>
-        .order-row {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 20px;
-            margin-top: 20px;
-        }
-        .order-ticket {
-            background-color: #fff8dc;
-            border: 2px solid #333;
-            border-radius: 8px;
-            /*padding: 10px;*/
-            width: 250px;
-            font-family: monospace;
-            white-space: pre-line;
-            text-align: left;
-        }
-    </style>
 </head>
 <body>
 <h1>Açaí Bowl Builder</h1>
 
-<div class="order-row">
-    <div class="order-ticket">QAOA Bowl
-        Base: 🥣 Açaí
-        Toppings:
-        🍓 Cost Hamiltonian
-        🫐 Mixer
-        🥄 Parameters
-        🍯 Optimizer
-        🥭 Mango
-        🍫 Cacao Nibs
-        🍇 Mixed Berries</div>
+<hr class="hr-divider">
 
-    <div class="order-ticket">Papaya QAOA Bowl
-        Base: 🧡 Papaya
-        Toppings:
-        🍓 Cost Hamiltonian
-        🫐 Mixer
-        🥄 Parameters
-        🍯 Optimizer
-        🥭 Mango
-        🍫 Cacao Nibs
-        🍇 Mixed Berries
-        🥜 Peanut Butter</div>
+<div class="order-row" id="order-row">
+    <div class="order-row" id="order-row">
+        <button class="order-ticket" data-ingredients="🍓 Cost Hamiltonian,🫐 Mixer,🥄 Parameters,🍯 Optimizer,🥭 Mango,🍫 Cacao Nibs,🍇 Mixed Berries">QAOA Bowl<br>Base: 🥣 Açaí</button>
 
-    <div class="order-ticket">Green QAOA Bowl
-        Base: 🍵 Green
-        Toppings:
-        🍓 Cost Hamiltonian
-        🫐 Mixer
-        🥄 Parameters
-        🍯 Optimizer
-        🍫 Cacao Nibs
-        🍇 Mixed Berries
-        🥜 Peanut Butter</div>
+        <button class="order-ticket" data-ingredients="🍓 Cost Hamiltonian,🫐 Mixer,🥄 Parameters,🍯 Optimizer,🥭 Mango,🍫 Cacao Nibs,🍇 Mixed Berries,🥜 Peanut Butter">Papaya QAOA Bowl<br>Base: 🧡 Papaya</button>
 
-    <div class="order-ticket">VQE Bowl
-        Base: 🥣 Açaí
-        Toppings:
-        🍓 Cost Hamiltonian
-        🫐 Ansatz
-        🥄 Parameters
-        🍯 Optimizer
-        🥭 Mango
-        🍫 Cacao Nibs
-        🥜 Peanut Butter</div>
+        <button class="order-ticket" data-ingredients="🍓 Cost Hamiltonian,🫐 Mixer,🥄 Parameters,🍯 Optimizer,🍫 Cacao Nibs,🍇 Mixed Berries,🥜 Peanut Butter">Green QAOA Bowl<br>Base: 🍵 Green</button>
 
-    <div class="order-ticket">Papaya VQE Bowl
-        Base: 🧡 Papaya
-        Toppings:
-        🍓 Cost Hamiltonian
-        🫐 Ansatz
-        🥄 Parameters
-        🍯 Optimizer
-        🥭 Mango
-        🍫 Cacao Nibs
-        🥜 Peanut Butter
-        🍇 Mixed Berries</div>
+        <button class="order-ticket" data-ingredients="🍓 Cost Hamiltonian,🫐 Ansatz,🥄 Parameters,🍯 Optimizer,🥭 Mango,🍫 Cacao Nibs,🥜 Peanut Butter">VQE Bowl<br>Base: 🥣 Açaí</button>
 
-    <div class="order-ticket">Green VQE Bowl
-        Base: 🍵 Green
-        Toppings:
-        🍓 Cost Hamiltonian
-        🫐 Ansatz
-        🥄 Parameters
-        🍯 Optimizer
-        🍫 Cacao Nibs
-        🥜 Peanut Butter
-        🍇 Mixed Berries</div>
+        <button class="order-ticket" data-ingredients="🍓 Cost Hamiltonian,🫐 Ansatz,🥄 Parameters,🍯 Optimizer,🥭 Mango,🍫 Cacao Nibs,🥜 Peanut Butter,🍇 Mixed Berries">Papaya VQE Bowl<br>Base: 🧡 Papaya</button>
 
-    <div class="order-ticket">Grover’s Bowl
-        Base: 🥥 Coconut
-        Toppings:
-        🍌 Oracle
-        🍍 Diffusion
-        🌰 Iterations
-        🍇 Mixed Berries</div>
+        <button class="order-ticket" data-ingredients="🍓 Cost Hamiltonian,🫐 Ansatz,🥄 Parameters,🍯 Optimizer,🍫 Cacao Nibs,🥜 Peanut Butter,🍇 Mixed Berries">Green VQE Bowl<br>Base: 🍵 Green</button>
 
-    <div class="order-ticket">Green Grover Bowl
-        Base: 🍵 Green
-        Toppings:
-        🍌 Oracle
-        🍍 Diffusion
-        🌰 Iterations
-        🍫 Cacao Nibs
-        🍇 Mixed Berries</div>
+        <button class="order-ticket" data-ingredients="🍌 Oracle,🍍 Diffusion,🌰 Iterations,🍇 Mixed Berries">Grover’s Bowl<br>Base: 🥥 Coconut</button>
 
-    <div class="order-ticket">Amplitude Est. Bowl
-        Base: 🥥 Coconut
-        Toppings:
-        🍌 Oracle
-        🍍 Diffusion
-        🌰 Iterations
-        🍯 Estimator
-        🥜 Peanut Butter</div>
+        <button class="order-ticket" data-ingredients="🍌 Oracle,🍍 Diffusion,🌰 Iterations,🍫 Cacao Nibs,🍇 Mixed Berries">Green Grover Bowl<br>Base: 🍵 Green</button>
 
-    <div class="order-ticket">Shor’s Bowl
-        Base: 🥥 Coconut
-        Toppings:
-        🍓 Modular ops
-        🫐 QFT
-        🌰 Precision
-        🍯 Post-processing
-        🍫 Cacao Nibs</div>
+        <button class="order-ticket" data-ingredients="🍌 Oracle,🍍 Diffusion,🌰 Iterations,🍯 Estimator,🥜 Peanut Butter">Amplitude Est. Bowl<br>Base: 🥥 Coconut</button>
 
-    <div class="order-ticket">Green Shor Bowl
-        Base: 🍵 Green
-        Toppings:
-        🍓 Modular ops
-        🫐 QFT
-        🌰 Precision
-        🍯 Post-processing
-        🍫 Cacao Nibs
-        🥜 Peanut Butter</div>
+        <button class="order-ticket" data-ingredients="🍓 Modular ops,🫐 QFT,🌰 Precision,🍯 Post-processing,🍫 Cacao Nibs">Shor’s Bowl<br>Base: 🥥 Coconut</button>
 
-    <div class="order-ticket">QPE Bowl
-        Base: 🥥 Coconut
-        Toppings:
-        🍓 Unitary ops
-        🫐 Controlled rotations
-        🌰 Iterations
-        🍯 Post-processing
-        🍫 Cacao Nibs</div>
+        <button class="order-ticket" data-ingredients="🍓 Modular ops,🫐 QFT,🌰 Precision,🍯 Post-processing,🍫 Cacao Nibs,🥜 Peanut Butter">Green Shor Bowl<br>Base: 🍵 Green</button>
 
-    <div class="order-ticket">Deutsch-Jozsa Bowl
-        Base: 🥥 Coconut
-        Toppings:
-        🍌 Oracle</div>
+        <button class="order-ticket" data-ingredients="🍓 Unitary ops,🫐 Controlled rotations,🌰 Iterations,🍯 Post-processing,🍫 Cacao Nibs">QPE Bowl<br>Base: 🥥 Coconut</button>
 
-    <div class="order-ticket">MBQC Bowl
-        Base: 🍵 Green
-        Toppings:
-        🍫 Entangled Cluster State
-        🍇 Adaptive Measurements
-        🍯 Classical Post-processing
-        🥜 Peanut Butter (opt.)
-        🥭 Mango (opt.)</div>
+        <button class="order-ticket" data-ingredients="🍌 Oracle">Deutsch-Jozsa Bowl<br>Base: 🥥 Coconut</button>
+
+        <button class="order-ticket" data-ingredients="🍫 Entangled Cluster State,🍇 Adaptive Measurements,🍯 Classical Post-processing,🥜 Peanut Butter,🥭 Mango">MBQC Bowl<br>Base: 🍵 Green</button>
+    </div>
 </div>
+
+<hr class="hr-divider">
+
+<h2>Current Order:</h2>
+<h3 id="bowl-name" style="margin-top: 20px;">Select Above</h3>
 
 <label for="base-select">Choose a base:</label>
 <select id="base-select">
@@ -175,6 +58,16 @@
 
 <div id="ingredients">
     <h2>Ingredients</h2>
+    <div class="ingredient">🍓 Cost Hamiltonian</div>
+    <div class="ingredient">🫐 Mixer</div>
+    <div class="ingredient">🥄 Parameters</div>
+    <div class="ingredient">🍯 Optimizer</div>
+    <div class="ingredient">🥭 Mango</div>
+    <div class="ingredient">🍫 Cacao Nibs</div>
+    <div class="ingredient">🍇 Mixed Berries</div>
+    <div class="ingredient">🍌 Oracle</div>
+    <div class="ingredient">🍍 Diffusion</div>
+    <div class="ingredient">🌰 Iterations</div>
 </div>
 
 <div id="bowl" ondrop="drop(event)" ondragover="allowDrop(event)">
